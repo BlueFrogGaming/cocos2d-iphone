@@ -262,7 +262,8 @@ static CCTextureCache *sharedTextureCache;
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
 
 		// Issue #886: TEMPORARY FIX FOR TRANSPARENT JPEGS IN IOS4
-		else if ( ( [[CCConfiguration sharedConfiguration] OSVersion] >= kCCiOSVersion_4_0) &&
+		else if ( NO &&
+				  ( [[CCConfiguration sharedConfiguration] OSVersion] >= kCCiOSVersion_4_0) &&
 				  ( [lowerCase hasSuffix:@".jpg"] || [lowerCase hasSuffix:@".jpeg"] ) 
 				 ) {
 			// convert jpg to png before loading the texture
